@@ -15,7 +15,7 @@ return new class extends Migration
             $table->increments('id');
             $table->string('url')->nullable();
             $table->string('code')->nullable();
-            $table->integer('userID')->nullable();
+            $table->integer('user:id')->nullable();
             $table->timestamps();
         });
     }
