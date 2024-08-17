@@ -16,7 +16,11 @@ Route::group([
     Route::post('/logout', [AuthController::class, 'logout'])->middleware('auth:api')->name('logout');
     Route::post('/refresh', [AuthController::class, 'refresh'])->middleware('auth:api')->name('refresh');
     Route::post('/me', [AuthController::class, 'me'])->middleware('auth:api')->name('me');
+    Route::post('/add',[LinkController::class, 'add'])->middleware('auth:api')->name('add');
+    Route::post('/all',[LinkController::class, 'all'])->middleware('auth:api')->name('all');
+    
     
 });
 
-Route::post('/add',[LinkController::class, 'add'])->name('add');
+
+
