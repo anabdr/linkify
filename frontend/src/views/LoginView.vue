@@ -57,7 +57,7 @@ const login = async () => {
     loading.value = true
 
     let resp = await useLogin(email.value, password.value)
-
+    console.log('resp login', resp)
     localStorage.setItem('token', resp.access_token)
 
     store.dispatch('setSession')

@@ -35,6 +35,7 @@ import { useLinkCounter } from '@/composables/useLinkCounter.js'
 import { useStore } from 'vuex'
 import Error from '@/components/Error'
 import Spinner from '@/components/Spinner'
+import { useFetchWithAuth } from '@/composables/useFetchWithAuth'
 
 const apiDomain = process.env.VUE_APP_DOMAIN
 

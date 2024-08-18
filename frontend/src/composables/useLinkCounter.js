@@ -1,4 +1,5 @@
 import { computed } from 'vue'
+import { useFetchWithAuth } from '@/composables/useFetchWithAuth'
 
 export const useLinkCounter = async (store) => {
 
@@ -6,13 +7,15 @@ export const useLinkCounter = async (store) => {
     
     try {
 
-        const data = await( await fetch(`${process.env.VUE_APP_DOMAIN}/api/auth/all`, {
+        const data = await useFetchWithAuth(`${process.env.VUE_APP_DOMAIN}/api/auth/all`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
                 'Authorization': `Bearer ${token.value}`
             },
-        })).json()
+        },
+        store)
+        
 
         if (data.error) throw 'Ha ocurrido un error'
 

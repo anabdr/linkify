@@ -10,7 +10,7 @@ export default createStore({
 
   },
   actions: {
-    setSession({ commit }) {
+    setSession({ commit, dispatch  }) {
 
       const token = localStorage.getItem('token')
 
@@ -28,7 +28,7 @@ export default createStore({
 
           console.error('Error decodificando el token:', error)
 
-          commit('logout')
+          dispatch('logout')
         }
       }
     },

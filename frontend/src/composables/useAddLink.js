@@ -1,4 +1,5 @@
 import { computed } from 'vue'
+import { useFetchWithAuth } from '@/composables/useFetchWithAuth'
 
 export const useAddLink = async (url, store) => {
 
@@ -6,14 +7,15 @@ export const useAddLink = async (url, store) => {
     
     try {
 
-        const data = await( await fetch(`${process.env.VUE_APP_DOMAIN}/api/auth/add`, {
+        const data = await useFetchWithAuth(`${process.env.VUE_APP_DOMAIN}/api/auth/add`, {
             method: 'POST',
             body: JSON.stringify({ url }),
             headers: {
                 'Content-Type': 'application/json',
                 'Authorization': `Bearer ${token.value}`
             },
-        })).json()
+        },
+        store)       
 
         if (data.error) throw 'Ha ocurrido un error'
 
