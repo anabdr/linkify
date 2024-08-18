@@ -1,5 +1,5 @@
 <template>
-  <div class="login">
+  <div class="linkContainer">
 
     <h1>Acortar enlace</h1>
 
@@ -84,5 +84,8 @@ const openLink = (link) => {
   border-radius: 10px;
   background-color: #ebffe8;
   cursor: pointer;
+}
+.linkContainer {
+    margin: 1rem;
 }
 </style>
