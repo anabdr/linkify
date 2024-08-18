@@ -5,6 +5,11 @@
 npm install
 ```
 
+## Rename .env.example to .env
+```
+change the value of VUE_APP_DOMAIN
+```
+
 ### Compiles and hot-reloads for development
 ```
 npm run serve
