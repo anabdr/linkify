@@ -26,6 +26,11 @@
         </li>
       </ul>
     </template>
+    <div v-else>
+      <img width="200px" src="@/assets/undraw_taken_re_yn20.svg">
+      <p>Vaya... parece que aún no tienes ningún enlace</p>
+      <router-link to="Link">Crea tu primer enlace ahora</router-link>
+    </div>
   </div>
 </template>
 
