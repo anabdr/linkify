@@ -9,6 +9,8 @@
   },
   "dependencies": {
     "apexcharts": "^3.52.0",
+    "bootstrap": "^5.3.3",
+    "bootstrap-vue": "^2.23.1",
     "core-js": "^3.8.3",
     "jwt-decode": "^4.0.0",
     "vue": "^3.2.13",
