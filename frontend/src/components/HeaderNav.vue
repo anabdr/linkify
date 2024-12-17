@@ -1,8 +1,8 @@
 <template>
   <header>
     
-    <div class="logo">
-    Acortador
+    <div class="logo" @click="goTo('Home')">
+        <img src="../assets/Linkify_logo_no_background-removebg-preview.png">
     </div>
 
     <nav>
@@ -13,7 +13,7 @@
         </ul> 
 
         <button :class="{ active: isMenuOpen }">
-            <router-link to="/link">Acortar enlace</router-link>
+            <router-link to="/link" class="btn btn-primary">Acortar enlace</router-link>
         </button>
 
         <div 
@@ -89,8 +89,14 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 15px 20px;
+    padding: 3px 20px;
     position: relative;
+
+    .logo{
+        img{
+            height:90px;
+        }
+    }
 
     .menu-icon {
         display: none;
@@ -168,7 +174,6 @@ header {
             margin: 0 15px;
 
             a {
-                background-color: #55cb55;
                 color: white;
                 border-radius: 4px;
                 padding: 15px 25px;
