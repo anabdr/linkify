@@ -8,7 +8,8 @@ export function useUrlValidation(url) {
     throw new Error('La URL debe comenzar con "www."')
   }
 
-  const domainPattern = /^www\.[a-zA-Z0-9-]+\.[a-zA-Z]{2,}(\/[a-zA-Z0-9-_\/]*)?$/
+  const domainPattern = /^(www\.)?[a-zA-Z0-9-]+\.[a-zA-Z]{2,}([\/?][a-zA-Z0-9-_.~&=]*)*$/;
+
   if (!domainPattern.test(url)) {
     throw new Error('El dominio no es válido.')
   }
