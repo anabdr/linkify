@@ -1,7 +1,11 @@
 <template>
   <div class="register">
 
-    <h1>Registro</h1>
+    <div class="logo">
+      <img src="../assets/Linkify_logo_no_background-removebg-preview.png">
+    </div>
+
+    <h3>Crear Usuario</h3>
 
     <Spinner v-if="loading"/>
 
@@ -75,3 +79,20 @@
     }
   }
 </script>
+
+<style lang="scss">
+.register{
+    background-color: white;
+    width: 40vw;
+    height: 80vh;
+    padding: 60px;
+    border-radius: 20px;
+
+    .logo{
+      margin-bottom: 20px;
+      img{
+        width: 50%;        
+      }
+    }
+}
+</style>
