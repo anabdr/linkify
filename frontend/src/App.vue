@@ -30,16 +30,22 @@ html, body {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
+  background-color:rgb(3 169 244 / 21%);
 
   .container {
     margin-top: 60px;
     max-width: 900px;
     margin: 0 auto;
+    display:flex;
+    align-items: center;
+    height:100vh;
+    justify-content: center;
+    
 
     form {
     display: flex;
     flex-flow: column;
-    margin: 40px 0px;
+    margin: 40px 0px 70px 0;
     
       input {
         padding: 15px 20px;
@@ -50,10 +56,16 @@ html, body {
 
         &[type=submit] {
           cursor: pointer;
-          background-color: #beebbe;
-          color: #2c782c;
+          font-size: large;
           font-weight: 700;
+          border-radius: 20px;
         }
+      }
+    }
+    .error[data-v-026a7a08] + form{
+      margin-top: 0;
+      input[type=submit]{
+        margin:0;
       }
     }
   }
