@@ -44,6 +44,36 @@ class LinkController extends Controller
 
     }
 
+    public function delete (Request $request){
+        $validator = Validator::make(request()->all(), [
+            'code' => 'required',
+        ]);
+          
+        if($validator->fails()){
+            return response()->json($validator->errors()->toJson(), 400);
+        }
+
+        $user = auth()->user();
+
+        try{
+
+            $url = Link::where('code',$request->code)
+                ->where('user_id',$user->id)
+                ->first();
+
+            if($url){
+
+                $url->delete();
+                return response()->json(200);
+
+            }else{
+                return response()->json(500);
+            }
+        }catch(Exception $e){
+            file_put_contents('errorDeleteLink.txt', $e->getMessage() . PHP_EOL, FILE_APPEND);
+        }
+    }
+
     public function all(){
         try{
             $user = auth()->user();
