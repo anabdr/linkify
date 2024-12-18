@@ -34,7 +34,7 @@ html, body {
 
   .container {
     margin-top: 60px;
-    max-width: 900px;
+    max-width: 85vw;
     margin: 0 auto;
     display:flex;
     align-items: center;
