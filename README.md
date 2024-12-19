@@ -90,7 +90,7 @@ Los datos se almacenan en una base de datos SQL para garantizar la persistencia 
    ```bash
    npm run dev
 
-# Uso
+## Uso
 1. Accede al frontend en el navegador:
    [http://localhost:3000](http://localhost:3000)
 2. Regístrate o inicia sesión.
@@ -99,9 +99,9 @@ Los datos se almacenan en una base de datos SQL para garantizar la persistencia 
 
 ---
 
-# Estructura de los Proyectos
+## Estructura de los Proyectos
 
-## Backend (Laravel)
+### Backend (Laravel)
 ```plaintext
 backend/
 ├── app/
@@ -119,7 +119,7 @@ backend/
 ├── composer.json
 └── artisan
 
-## Frontend (Vue)
+### Frontend (Vue)
 ```plaintext
 frontend/
 ├── src/
@@ -135,7 +135,7 @@ frontend/
 ├── package.json
 └── vite.config.js
 
-# Contribuciones
+## Contribuciones
 Las contribuciones son bienvenidas. Si deseas colaborar:
 1. Haz un fork del proyecto.
 2. Crea una nueva rama (`feature/nueva-funcionalidad`).
@@ -143,12 +143,12 @@ Las contribuciones son bienvenidas. Si deseas colaborar:
 
 ---
 
-# Licencia
+## Licencia
 Este proyecto está licenciado bajo la [MIT License](LICENSE).
 
 ---
 
-# Contacto
+## Contacto
 Si tienes preguntas o sugerencias, no dudes en contactarme:
 
 - **Correo**: [ana.bdr.7@gmail.com](mailto:ana.bdr.7@gmail.com)
