@@ -133,15 +133,21 @@ frontend/
 ├── package.json
 └── vite.config.js
 
+---
 
 ## Contribuciones
 Las contribuciones son bienvenidas. Si deseas colaborar:
+
 1. Haz un fork del proyecto.
 2. Crea una nueva rama (`feature/nueva-funcionalidad`).
 3. Envía un pull request.
 
+---
+
 ## Licencia
 Este proyecto está licenciado bajo la [MIT License](LICENSE).
+
+---
 
 ## Contacto
 Si tienes preguntas o sugerencias, no dudes en contactarme:
