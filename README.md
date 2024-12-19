@@ -99,42 +99,6 @@ Los datos se almacenan en una base de datos SQL para garantizar la persistencia 
 
 ---
 
-## Estructura de los Proyectos
-
-### Backend (Laravel) y Frontend (Vue)
-```plaintext
-backend/
-├── app/
-├── bootstrap/
-├── config/
-├── database/
-│   ├── migrations/
-│   ├── seeders/
-├── public/
-├── routes/
-│   ├── api.php
-│   ├── web.php
-├── tests/
-├── .env
-├── composer.json
-└── artisan
-
-frontend/
-├── src/
-│   ├── assets/
-│   ├── components/
-│   ├── composables/
-│   ├── store/
-│   ├── views/
-│   ├── App.vue
-│   ├── main.js
-├── public/
-├── .env
-├── package.json
-└── vite.config.js
-
----
-
 ## Contribuciones
 Las contribuciones son bienvenidas. Si deseas colaborar:
 
@@ -154,6 +118,7 @@ Si tienes preguntas o sugerencias, no dudes en contactarme:
 
 - **Correo**: [ana.bdr.7@gmail.com](mailto:ana.bdr.7@gmail.com)
 - **GitHub**: [anabdr](https://github.com/anabdr)
+
 
 
 
