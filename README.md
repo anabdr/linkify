@@ -101,7 +101,7 @@ Los datos se almacenan en una base de datos SQL para garantizar la persistencia 
 
 ## Estructura de los Proyectos
 
-### Backend (Laravel)
+### Backend (Laravel) y Frontend (Vue)
 ```plaintext
 backend/
 ├── app/
@@ -119,7 +119,6 @@ backend/
 ├── composer.json
 └── artisan
 
-### Frontend (Vue)
 frontend/
 ├── src/
 │   ├── assets/
@@ -133,6 +132,7 @@ frontend/
 ├── .env
 ├── package.json
 └── vite.config.js
+
 
 
 ## Contribuciones
