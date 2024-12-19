@@ -120,7 +120,6 @@ backend/
 └── artisan
 
 ### Frontend (Vue)
-```plaintext
 frontend/
 ├── src/
 │   ├── assets/
@@ -134,6 +133,7 @@ frontend/
 ├── .env
 ├── package.json
 └── vite.config.js
+
 
 ## Contribuciones
 Las contribuciones son bienvenidas. Si deseas colaborar:
