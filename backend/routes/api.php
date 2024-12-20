@@ -17,6 +17,7 @@ Route::group([
     Route::post('/refresh', [AuthController::class, 'refresh'])->middleware('auth:api')->name('refresh');
     Route::post('/me', [AuthController::class, 'me'])->middleware('auth:api')->name('me');
     Route::post('/add',[LinkController::class, 'add'])->middleware('auth:api')->name('add');
+    Route::post('/addClick',[LinkController::class, 'addClick'])->middleware('auth:api')->name('addClick');
     Route::post('/delete',[LinkController::class, 'delete'])->middleware('auth:api')->name('delete');
     Route::post('/all',[LinkController::class, 'all'])->middleware('auth:api')->name('all');
     

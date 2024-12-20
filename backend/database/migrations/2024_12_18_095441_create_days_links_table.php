@@ -11,11 +11,11 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('links', function (Blueprint $table) {
+        Schema::create('days_links', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('url')->nullable();
-            $table->string('code')->nullable();
-            $table->integer('user_id')->nullable();
+            $table->string('date')->nullable();
+            $table->integer('link_id')->nullable();
+            $table->integer('count')->default('0');
             $table->timestamps();
         });
     }
@@ -25,6 +25,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('links');
+        Schema::dropIfExists('days_links');
     }
 };
