@@ -110,11 +110,13 @@ class LinkController extends Controller
                     'links.user_id as user_id',
                     'links.url as url',
                     'links.code as code',
-                    DB::raw('COALESCE(SUM(days_links.count), 0) as count'),
-                    DB::raw('COALESCE(MAX(days_links.date), NULL) as date') 
+                    'days_links.date as date',
+                    DB::raw('COALESCE(SUM(days_links.count), 0) as count')
                 )
-                ->groupBy('links.user_id', 'links.url', 'links.code')
+                ->groupBy('links.user_id', 'links.url', 'links.code', 'days_links.date')
+                ->orderBy('days_links.date', 'asc') 
                 ->get();
+
 
             return response()->json($links,200);
 
@@ -165,13 +167,11 @@ class LinkController extends Controller
     public function addCount($link,$userId=null){
 
         $date = Carbon::now()->format('Y-m-d');
-        
+
         $query = DB::table('days_links')
             ->where('link_id',$link->id)
             ->where('date', Carbon::now()->format('Y-m-d'));
-            if($userId){
-                $query->where('user_id', $userId);
-            }
+            
         $daysLinks = $query->first();
 
 

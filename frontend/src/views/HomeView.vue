@@ -15,7 +15,7 @@
       />
 
       <ul v-if="links" class="links">
-        <li v-for="link in links" :key="link.id">
+        <li v-for="link in links.filter((link, index, self) => self.findIndex(l => l.url === link.url) === index)" :key="link.id">
           <p>{{ link.url }}</p>
           <span @click="openLink(link)">{{ `${apiDomain}/${link.code}` }}</span>
           <div class="icons">
@@ -134,16 +134,19 @@ const fetchCounter = async () => {
   }
 }
 
-const openLink = (link) => {
-  useAddClick(link, store)
+const openLink = async (link) => {
+  useAddClick(link, store)  
   window.open(`${apiDomain}/${link.code}`, '_target')
+  await fetchCounter()
+  
 }
 
-const copyToClipboard = (link) => {
+const copyToClipboard = async (link) => {
   try {
     navigator.clipboard.writeText(`${apiDomain}/${link.code}`)
     cleanModal('¡Enlace copiado!')
     useAddClick(link, store)
+    await fetchCounter()
   } catch (err) {
     console.log('error: ' + err)
   }
@@ -177,6 +180,13 @@ div.dashboard {
   padding: 70px;
   border-radius: 20px;
 
+   @media(max-width: 700px){
+      width: 98vw;
+      height: 98vh;
+      padding: 2%;
+      margin-top: 2%;
+    }
+
   ul.links {
     margin: 20px 0 0 0;
     padding: 0;
@@ -191,9 +201,17 @@ div.dashboard {
       border-radius: 4px;
       padding: 5px 20px;
 
+      @media (max-width: 700px){
+        display: flex;
+        flex-direction: column;
+      }
+
       p {
         width: 16vw;
         text-align: left;
+        @media (max-width: 700px){
+          width: 100vw;
+        }
       }
 
       span {
@@ -203,15 +221,28 @@ div.dashboard {
         padding: 8px 30px;
         width: 65%;
         margin-left: 30px;
+        @media (max-width: 700px){
+          padding: 8px 8px;
+          margin-left: 0;
+        }
       }
 
       .icons {
         max-width: 7%;
+        @media (max-width: 700px){
+          width: 100vw;
+          display: flex;
+          justify-content: space-evenly;
+        }
         svg {
-          width: 33%;
+          width: 27%;
           height: 30%;
           padding: 0;
           margin: 0 0 0 10px;
+          @media (max-width: 700px){
+            width: 40%;
+            height: auto;
+          }
         }
 
         svg:hover {
