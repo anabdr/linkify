@@ -60,7 +60,7 @@ Los datos se almacenan en una base de datos SQL para garantizar la persistencia 
 ### Instalaciones  
 1. **Clonar el repositorio**:  
    ```bash
-   git clone https://github.com/usuario/acortador-urls.git
+   git clone https://github.com/anabdr/linkify.git
 2. **Configurar el backend**:  
    ```bash
    cd backend
@@ -68,6 +68,7 @@ Los datos se almacenan en una base de datos SQL para garantizar la persistencia 
    ```bash
    composer install
 4. **Renombra el archivo .env.example a .env en ambos proyectos**:
+   Asegúrate de configurar las claves necesarias, como la conexión a la base de datos (DB_DATABASE, DB_USERNAME, DB_PASSWORD) y cualquier otra variable requerida.
 5. **Generar la clave JWT**:
    ```bash
    php artisan jwt:secret
