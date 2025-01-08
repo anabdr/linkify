@@ -120,7 +120,7 @@ header {
         left: 0;
         bottom: 0;
         margin: 0;
-        z-index: 9;
+        z-index: 12;
         background-color: white;
         width: 100%;
         display: flex;
@@ -140,7 +140,7 @@ header {
             li, a{
                 font-size: 25px;
                 text-decoration: none;
-                color: green;
+                color: rgb(5 38 55 / 97%);
                 list-style: none;
                 padding: 25px;
                 cursor: pointer;

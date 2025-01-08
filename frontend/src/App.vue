@@ -32,12 +32,17 @@ html, body {
   color: #2c3e50;
   background-color:rgb(3 169 244 / 21%);
 
+  header + .container {
+    margin-top: 120px; 
+    height:100vh;
+}
+
   .container {
-    margin-top: 40px;
+    margin-top: 0 auto;
     max-width: 85vw;
     display: flex;
     align-items: center;
-    height:auto;
+    height:100vh;
     justify-content: center;
     
 
@@ -49,27 +54,27 @@ html, body {
     
 
     form {
-    display: flex;
-    flex-flow: column;
-    margin: 40px 0px 70px 0;
-    @media(max-width: 700px){
-      margin: 40px 0px 20px 0;
-    }
-    
-      input {
-        padding: 15px 20px;
-        font-size: 1rem;
-        border: 1px solid #cecece;
-        border-radius: 4px;
-        margin-bottom: 10px;
-
-        &[type=submit] {
-          cursor: pointer;
-          font-size: large;
-          font-weight: 700;
-          border-radius: 20px;
-        }
+      display: flex;
+      flex-flow: column;
+      margin: 40px 0px 70px 0;
+      @media(max-width: 700px){
+        margin: 40px 0px 20px 0;
       }
+      
+        input {
+          padding: 15px 20px;
+          font-size: 1rem;
+          border: 1px solid #cecece;
+          border-radius: 4px;
+          margin-bottom: 10px;
+
+          &[type=submit] {
+            cursor: pointer;
+            font-size: large;
+            font-weight: 700;
+            border-radius: 20px;
+          }
+        }
     }
     .error[data-v-026a7a08] + form{
       margin-top: 0;

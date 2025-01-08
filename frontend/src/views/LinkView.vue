@@ -105,6 +105,10 @@ const openLink = (link) => {
   border-radius: 10px;
   background-color: #ebffe8;
   cursor: pointer;
+  p{
+    text-overflow: ellipsis;
+    overflow: hidden;
+  }
 }
 .linkContainer {
     margin: 1rem;
@@ -117,6 +121,7 @@ const openLink = (link) => {
       width: 100%;
       height: auto;
       padding: 20px;
+      margin-top: -200px;
     }
     form{
       input{
