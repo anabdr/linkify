@@ -103,10 +103,10 @@ const fetchCounter = async () => {
     lastMonthDate.setMonth(currentDate.getMonth() - 1)
 
     const daysInLastMonth = Array.from({ length: 31 }, (_, i) => {
-      const date = new Date(lastMonthDate)
-      date.setDate(lastMonthDate.getDate() + i)
+      const date = new Date(currentDate)
+      date.setDate(currentDate.getDate() - 30 + i)
       return date.toISOString().split('T')[0]
-    }).filter(date => new Date(date) <= currentDate)
+    })
 
     const countsByUrl = {}
     counter.forEach(({ url, date, count }) => {
