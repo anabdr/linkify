@@ -33,19 +33,28 @@ html, body {
   background-color:rgb(3 169 244 / 21%);
 
   .container {
-    margin-top: 60px;
+    margin-top: 40px;
     max-width: 85vw;
-    margin: 0 auto;
-    display:flex;
+    display: flex;
     align-items: center;
-    height:100vh;
+    height:auto;
     justify-content: center;
+    
+
+    @media(max-width: 700px){
+      width: 98vw;
+      height: 98vh;
+      padding: 0;
+    }
     
 
     form {
     display: flex;
     flex-flow: column;
     margin: 40px 0px 70px 0;
+    @media(max-width: 700px){
+      margin: 40px 0px 20px 0;
+    }
     
       input {
         padding: 15px 20px;

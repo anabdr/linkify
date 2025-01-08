@@ -175,6 +175,8 @@ onMounted(() => {
 </script>
 
 <style lang="scss">
+
+
 div.dashboard {
   background-color: white;
   padding: 70px;
@@ -182,7 +184,7 @@ div.dashboard {
 
    @media(max-width: 700px){
       width: 98vw;
-      height: 98vh;
+      height: auto;
       padding: 2%;
       margin-top: 2%;
     }
@@ -196,9 +198,9 @@ div.dashboard {
       display: flex;
       justify-content: space-between;
       align-items: center;
-      background-color: #eeeeee;
+      background-color: rgba(3, 169, 244, 0.21);
       margin-bottom: 5px;
-      border-radius: 4px;
+      border-radius: 14px;
       padding: 5px 20px;
 
       @media (max-width: 700px){
@@ -209,8 +211,11 @@ div.dashboard {
       p {
         width: 16vw;
         text-align: left;
+        text-overflow: ellipsis;
+        overflow: hidden;
         @media (max-width: 700px){
           width: 100vw;
+          text-align: center;
         }
       }
 
@@ -219,11 +224,13 @@ div.dashboard {
         cursor: pointer;
         border: 2px dashed #ffa7a7;
         padding: 8px 30px;
-        width: 65%;
         margin-left: 30px;
         @media (max-width: 700px){
           padding: 8px 8px;
           margin-left: 0;
+          text-overflow: ellipsis;
+          max-width: 90vw;
+          overflow: hidden;
         }
       }
 
@@ -233,6 +240,7 @@ div.dashboard {
           width: 100vw;
           display: flex;
           justify-content: space-evenly;
+          place-content: center;
         }
         svg {
           width: 27%;
@@ -240,8 +248,10 @@ div.dashboard {
           padding: 0;
           margin: 0 0 0 10px;
           @media (max-width: 700px){
-            width: 40%;
+            width: 24px;
             height: auto;
+            flex-shrink: 0; 
+            padding-top: 5px;
           }
         }
 

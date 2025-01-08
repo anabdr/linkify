@@ -40,6 +40,7 @@ import { useUrlValidation } from '@/composables/useUrlValidation.js'
 import { useRouter } from 'vue-router'
 import Error from '@/components/Error'
 import Spinner from '@/components/Spinner'
+import { useAddClick } from '@/composables/useAddClick'
 
 const apiDomain = process.env.VUE_APP_DOMAIN
 
@@ -92,8 +93,8 @@ const add = async () => {
 }
 
 const openLink = (link) => {
-
   window.open(link, '_target')
+  useAddClick(link, store)
 }
 
 </script>
@@ -112,12 +113,23 @@ const openLink = (link) => {
     height: 50vh;
     padding: 60px;
     border-radius: 20px;
+    @media(max-width: 700px){
+      width: 100%;
+      height: auto;
+      padding: 20px;
+    }
     form{
       input{
         margin: 50px 0 0 0;
+        @media(max-width: 700px){
+            margin-top: 20px;
+          }
 
         &[type=submit] {
           margin-top: 50px;
+          @media(max-width: 700px){
+            margin-top: 0;
+          }
         }
       }
 

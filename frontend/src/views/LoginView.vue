@@ -17,14 +17,15 @@
         type="text" 
         placeholder="Email" 
         @input="validateEmail" 
-        :class="{ valid: !emailError, invalid: emailError }"/>
+        :class="{ 'border border-danger': emailError }"/>
       <p v-if="emailError" style="color: red;">{{ emailError }}</p>
 
       <input 
         v-model="password"
         type="password" 
         placeholder="Password" 
-        @input="validatePassword"/>
+        @input="validatePassword"
+         :class="{ 'border border-danger': passwordError }"/>
       <p v-if="passwordError" style="color: red;">{{ passwordError }}</p>
 
       <input 
@@ -133,7 +134,9 @@ const login = async () => {
   //mobile
   @media(max-width: 700px){
     width:100vw;
-    .logo{      
+    height: auto;
+    .logo{  
+      margin-bottom: 0px;    
       h4{
         font-size: 1rem;
         margin-top: 20px;
@@ -144,7 +147,7 @@ const login = async () => {
   form{
     input[type=submit]{
       margin-top: 25px;
-    }
+    }    
   }
 }
 
